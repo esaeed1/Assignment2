@@ -36,7 +36,7 @@ def get_jokes(num):
         random_joke = random.choice(jokes)
         question, answer = random_joke.split('? ')
         formatted_joke = {
-            "Question": question,
+            ".Question": question,  # had to add . in front because it goes Alphabetical Order
             "Answer": answer
         }
         formatted_jokes.append(formatted_joke)
