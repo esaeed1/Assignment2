@@ -20,6 +20,7 @@ original_jokes = [
 jokes = original_jokes.copy()
 
 
+# over here I am trying to not allow same jokes apper twice in same sesson
 def reset_jokes():
     global jokes
     jokes = original_jokes.copy()
@@ -29,7 +30,7 @@ def get_jokes(num):
     global jokes
     formatted_jokes = []
 
-    if len(jokes) == 0:
+    if len(jokes) < 2:
         reset_jokes()
 
     for i in range(num):
